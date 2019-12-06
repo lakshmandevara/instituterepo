@@ -1,0 +1,45 @@
+{% extends 'base2.html' %}
+<html>
+<head>
+    <title>contact Page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    ul{
+        list-style: none;
+    }
+    li{
+        list-style: none;
+        margin-top: -7px;
+    }
+    body{
+        background-color: cyan;
+    }
+    .row{
+        color:red;
+    }
+
+    </style>
+
+<div class="container">
+<div class="row">
+    <div class="offset-md-3 col-md-4">
+        <form method="POST">
+            {% csrf_token %}
+            {{ cform }}<br>
+            <center><input type ="submit" value="submit" class="btn btn-success">
+            <input type ="reset" value="clear" class="btn btn-danger"></center><br><br>
+
+
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+
+
+</body>
+</html>

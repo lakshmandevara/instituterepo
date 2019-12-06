@@ -1,0 +1,72 @@
+{% extends 'base2.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>Gallary Page</title>
+</head>
+
+<body>
+{% block content %}
+    <style>
+    .container img {
+
+        filter: grayscale(100%);
+        transition: 1.3s;
+
+
+    }
+    .container img :hover{
+        filter: grayscale(0);
+        transform: scale(1.1);
+    }
+
+
+
+    body{
+        background-color: #ff9185;
+    }
+
+</style>
+
+    <div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <a href="{% static 'images/images.jpg' %}"  data-lightbox="container"  ><img src="{% static 'images/lk.jpg' %}"></a>
+        </div>
+       <div class="col-sm-4">
+          <a href="{% static 'images/img.jpg' %}"data-lightbox="container" > <img src="{% static 'images/lk.jpg' %}"></a>
+
+        </div>
+        <div class="col-sm-4">
+             <a href="{% static 'images/img5.jpg' %}"data-lightbox="container" > <img src="{% static 'images/lk.jpg' %}"></a>
+
+        </div>
+        <div class="col-md-4">
+           <a href="{% static 'images/img4.jpg' %}"data-lightbox="container" > <img src="{% static 'images/lk.jpg' %}"></a>
+
+
+        </div>
+        <div class="col-md-4">
+            <a href="{% static 'images/images (2).jpg' %}"data-lightbox="container" > <img src="{% static 'images/lk.jpg' %}"></a>
+
+
+        </div>
+        <div class="col-md-4">
+            <a href="{% static 'images/lk.jpg' %}"data-lightbox="container" > <img src="{% static 'images/lk.jpg' %}"></a>
+
+        </div>
+        <div class="col-md-4">
+            <a href="{% static 'images/lk.jpg' %}"data-lightbox="container" > <img src="{% static 'images/lk.jpg' %}"></a>
+
+        </div>
+        <div class="col-md-4">
+            <a href="{% static 'images/lk.jpg' %}"data-lightbox="container" > <img src="{% static 'images/lk.jpg' %}"></a>
+
+        </div>
+
+    </div>
+    </div>
+
+    {% endblock %}
+</body>
+</html>

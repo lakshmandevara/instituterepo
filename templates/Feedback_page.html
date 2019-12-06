@@ -1,0 +1,99 @@
+{% extends 'base2.html' %}
+<html>
+<head>
+    <title>Feed Back</title>
+
+</head>
+
+
+
+
+<body>
+
+{% block content %}
+
+    <style>
+        #name1{
+            font-size:30px;
+            color: #ff5cd0;
+        }
+        h1{
+            color: #ff6dde;
+
+        }
+
+        a{
+            color: #5bff50;
+        }
+label{
+    color: #597f8b;
+}
+.container{
+    background-color:greenyellow;
+     padding:10px 10px;
+    }
+    body{
+        text-align: center;
+        background-color: #b7f1ff;
+    }
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+<div class="container" >
+<div class="row">
+    <div class="offset-md-3 col-md-6">
+    {% if fdata %}
+    <h3>Your Feedbacks Are</h3>
+    {% endif %}
+
+        {% if fdata %}
+            {% for i in fdata %}
+                {% if i.rating >= 6 and i.rating <= 10  %}
+               <b id="name1"> Name:{{ i.name|capfirst}}</b><br>
+                rating:{{ i.rating }}<br>
+                Date:{{ i.date }}<br>
+                Feedback:{{ i.feedback }}<br><br>
+                {% endif %}
+
+            {% endfor %}
+        {% else %}
+        <h1>No Feedbacks Are Available</h1>
+        {% endif %}
+        <form method="POST">
+            {% csrf_token %}
+            <h3>Please Enter Your Feedback</h3>
+            {{fform}} <br>
+
+            <center>
+                <input type="submit" value="send" class="btn btn-success">
+                <input type="reset" value="Clear" class="btn btn-danger">
+            </center> <br><br>
+
+
+        </form>
+
+    </div>
+</div>
+</div>
+{% endblock %}
+
+
+
+
+</body>
+</html>

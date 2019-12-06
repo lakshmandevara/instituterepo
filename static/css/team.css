@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.team{
+    background-color: #78ffba;
+    text-align: center;
+    padding: 60px;
+    overflow: hidden;
+}
+.team h1{
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    color: blue;
+}
+.spl{
+    width: 250px;
+    height: 5px;
+    margin: auto;
+    display: block;
+    background-color: #5bff50;
+    margin-top: -30px;
+    margin-bottom: 30px;
+}
+.pics a{
+    display: inline-block;
+    margin: 0px 25px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.pics a img{
+    width: 100%;
+    filter: grayscale(100%);
+    transition: 1.3s;
+}
+.pics a img:hover{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+.section{
+    text-align: justify;
+    font-size: 20px;
+    color: red;
+    height: 0;
+    overflow: hidden;
+}
+.section:target{height: auto
+}
+.name{
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}

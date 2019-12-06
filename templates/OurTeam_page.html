@@ -1,0 +1,23 @@
+{% extends 'base2.html' %}
+{% load staticfiles %}
+<html>
+<head>
+    <title>ourteam Page</title>
+</head>
+<body>
+{% block content %}
+<div class="team">
+    <h1>Our Team</h1>
+    <span class="sp1"></span>
+    <div class="pics">
+        <a href="#p1"> <img src="{% static 'images/lk.jpg' %}"></a>
+    </div>
+<div class="section" id="p1">
+    <h1 class="name">LAKSHMAN</h1>
+    <span class="sp1"></span>
+    <center><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam in incidunt libero tempora vitae! Architecto eos impedit laboriosam mollitia nemo nesciunt, nihil odio optio quae quia rem totam, voluptates voluptatum!</p></center>
+</div>
+{% endblock %}
+</div>
+</body>
+</html>

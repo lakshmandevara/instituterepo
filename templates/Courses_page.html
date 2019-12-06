@@ -1,0 +1,58 @@
+{% extends 'base2.html' %}
+
+<html>
+<head>
+    <title> Course Page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    table{width:100%;text-align:center;}
+    tbody:nth-of-type(odd){background-color: #cccccc; color: white;}
+    tbody:nth-of-type(even){background-color: #597f8b; color: white;}
+
+    </style>
+
+<div class="container">
+<div class="row">
+    <div class="col-md-12">
+        {% if courses %}
+        <table>
+            <thead>
+            <tr>
+                <th>Course Id</th>
+                <th>Course Name</th>
+                <th>Course Dur</th>
+                <th>Course Fee</th>
+                <th>Course Date</th>
+                <th>Course Time</th>
+                <th>Trainer Name</th>
+                <th>Trainer Exp</th>
+            </tr>
+            </thead>
+            {% for i in courses %}
+            <tbody>
+             <tr>
+            <td> {{ i.course_id }}</td>
+            <td> {{ i.course_name }}</td>
+            <td> {{ i.course_dur}}</td>
+            <td> {{ i.course_fee}}</td>
+            <td> {{ i.start_date }}</td>
+            <td> {{ i.course_time }}</td>
+            <td> {{ i.trainer_name }}</td>
+            <td> {{ i.trainer_exp}}</td>
+            </tr>
+            </tbody>
+            {% endfor %}
+             <h1> courses AVailable</h1>
+        {% endif %}
+
+        </table>
+
+
+    </div>
+</div>
+</div>
+{% endblock %}
+</body>
+</html>

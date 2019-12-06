@@ -1,0 +1,86 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>Base2 File</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+    <script type="text/javascript" src ="{% static 'js/lightbox-plus-jquery.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+</head>
+<style>
+
+    #ul1{
+        list-style-type: none;
+        margin:0;
+        padding:0;
+        overflow: hidden;
+        background-color: orangered;
+
+    }
+    li a{
+        float: left;
+    }
+
+    li a{
+        display:block;
+        color:white;
+        text-align: center;
+        padding:15px 20px;
+        text-decoration:none;
+        font-size: 20px ;
+
+    }
+
+
+    .active{
+        background-color: green;
+    }
+li a:hover{
+    background-color: orange;
+    color:black;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:forestgreen;
+    color: white;
+    text-align: center;
+
+
+}
+#h11{
+    font-size: 50px;
+    text-shadow: 3px 3px 3px blueviolet;
+    margin-top: -10px;
+
+}
+
+
+</style>
+<body>
+<ul id="ul1">
+    <li><a href="/Home/" class="active">Home</a></li>
+    <li><a href="/Contact/">Contact</a></li>
+    <li><a href="/Courses/">Courses</a></li>
+    <li><a href="/Feedback/">Feedback</a></li>
+    <li><a href="/OurTeam/">OurTeam</a></li>
+    <li><a href="/Gallery/">Gallery</a></li>
+</ul>
+
+<center> <h1 id="h11"><marquee>Welcome to Lakshman Kumar</marquee></h1> </center>
+{% block content %}
+{% endblock %}
+
+<footer class="footer">
+    <h3> <marquee>Thank You All</marquee></h3>
+</footer>
+</body>
+</html>
